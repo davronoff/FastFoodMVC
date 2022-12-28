@@ -1,12 +1,8 @@
 ﻿@{
 
 }
-@model Food
+@model AddFoodViewModel
 <form asp-controller="admin" asp-action="add" method="post">
-   @* <div class="input-group mb-3">
-        <span class="input-group-text" id="inputGroup-sizing-default">Id</span>
-        <input asp-for="Id" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-    </div>*@
     <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
         <input asp-for="Name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
@@ -20,7 +16,7 @@
         <input asp-for=Price type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
     <div class="input-group mb-3">
-        <input asp-for=Image type="text" class="form-control" id="inputGroupFile02">
+        <input asp-for=Image type="file" accept="image/*" class="form-control" id="inputGroupFile02">
         <label class="input-group-text" for="inputGroupFile02">Image</label>
     </div>
     <div class="input-group mb-3">

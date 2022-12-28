@@ -1,6 +1,7 @@
 using FastFoodMVC.DataLayer;
 using FastFoodMVC.Interface;
 using FastFoodMVC.Repo;
+using FastFoodMVC.Service;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 
 builder.Services.AddScoped<IFoodInterface, FoodRepo>();
+builder.Services.AddScoped<IImageControllerInterface, ImageControllerService>();
 
 var app = builder.Build();
 
