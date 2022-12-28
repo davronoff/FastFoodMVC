@@ -2,25 +2,30 @@
 
 }
 @model Food
-<form asp-controller="" asp-action="" method="post">
-    <div class="input-group mb-3">
+<form asp-controller="admin" asp-action="add" method="post">
+   @* <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">Id</span>
-        <input asp-for="Id" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-    </div>
+        <input asp-for="Id" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>*@
     <div class="input-group mb-3">
-        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+        <input asp-for="Name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
     <div class="input-group">
-        <span class="input-group-text">With textarea</span>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <span class="input-group-text">Description</span>
+        <textarea asp-for=Description class="form-control" aria-label="With textarea"></textarea>
     </div>
     <div class="input-group mb-3">
-        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <span class="input-group-text" id="inputGroup-sizing-default">Price</span>
+        <input asp-for=Price type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
     <div class="input-group mb-3">
-        <input type="file" class="form-control" id="inputGroupFile02">
-        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+        <input asp-for=Image type="text" class="form-control" id="inputGroupFile02">
+        <label class="input-group-text" for="inputGroupFile02">Image</label>
+    </div>
+    <div class="input-group mb-3">
+        <button type="submit" class="btn btn-success me-5">
+            Save
+        </button>
     </div>
 </form>

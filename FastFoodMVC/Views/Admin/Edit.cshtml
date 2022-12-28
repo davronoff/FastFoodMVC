@@ -2,7 +2,7 @@
 }
 @model Food
 <form asp-controller="" asp-action="" method="post">
-    <input type="hidden" value="@Model.Id" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <input type="hidden" asp-for="Id" value="@Model.Id" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
         <input asp-for="Name" type="text" value="@Model.Name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
@@ -15,7 +15,7 @@
         <span class="input-group-text" id="inputGroup-sizing-default">Price</span>
         <input asp-for="Price" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
-    <input type="hidden" value="@Model.Image" class="form-control" id="inputGroupFile02">
+    <input type="hidden" asp-for=Image value="@Model.Image" class="form-control" id="inputGroupFile02">
     <div class="input-group mb-3">
         <input asp-for="Image" type="file" class="form-control" id="inputGroupFile02">
         <label class="input-group-text" for="inputGroupFile02">Upload</label>

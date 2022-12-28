@@ -1,20 +1,31 @@
 ﻿@{
 }
+@model List<Food>
 <table class="table table-striped-columns">
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td></td>
-        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Price</td>
+                <td>@item.Image</td>
+                <td>
+                    <a asp-controller="" asp-action="" class="btn btn-danger">Danger</a>
+                    <a asp-controller="" asp-action="" class="btn btn-primary">Primary</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
